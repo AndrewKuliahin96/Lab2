@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!--
+    Добавляем три View: EditText, Button и TextView
+    В EditText будем вводить числа (ставим android:inputType="number")
+    и по нажатию на кнопку выводить в TextView инвертированное значение
+
+    Также можно увидеть значение атрибута "@string/..."
+    откройте файл */res/values/strings.xml
+    в нем вы увидите текстовые ресурсы
+    Это хорошая практика, хранить в strings.xml текстовые ресурсы
+    потому что в таком случае легко локализировать приложение
+    -->
+
+    <EditText
+        android:id="@+id/etInitialValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/initial_value"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bInvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invert" />
+
+    <TextView
+        android:id="@+id/tvInvertedValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/inverted_value" />
+
+</LinearLayout>

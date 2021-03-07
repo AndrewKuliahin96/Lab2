@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab 2</string>
+    <string name="invert">Invert</string>
+    <string name="initial_value">Initial value</string>
+    <string name="inverted_value">Inverted value</string>
+</resources>
