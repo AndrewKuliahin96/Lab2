@@ -23,11 +23,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initUI()
+
+        // TODO: ViewModel
 //        observeLiveData()
     }
 
-    // TODO: раскомметируйте код ниже для того,
-    //  чтобы попробовать сохранять состояние при помощи Bundle
+    // TODO: Bundle
     // Этот метод вызывается, когда нужно сохранить состояние View
 //    override fun onSaveInstanceState(outState: Bundle) {
 //        // Состояние сохраняется в обьект типа Bundle
@@ -53,8 +54,7 @@ class MainActivity : AppCompatActivity() {
 //       setInvertedValueText()
 //   }
 
-    // TODO: раскомметируйте код ниже для того,
-    //  чтобы попробовать сохранять состояние при помощи Bundle
+    // TODO: ViewModel
 //    // Обьявляем нашу ViewModel при помощи делегата by viewModels
 //    private val viewModel: MainViewModel by viewModels()
 //
@@ -81,8 +81,7 @@ class MainActivity : AppCompatActivity() {
             // Вызываем функцию для отображения нашего значения
             setInvertedValueText()
 
-            // Если вы используете ViewModel - раскомментируйте следующий блок
-            // Обновление значения live data
+            // TODO: ViewModel
 //            viewModel.invertedValueLiveData.value = invertedValue
         }
     }
