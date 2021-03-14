@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,9 +23,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initUI()
+//        observeLiveData()
     }
 
-    // TODO: раскомметируйте код ниже
+    // TODO: раскомметируйте код ниже для того,
+    //  чтобы попробовать сохранять состояние при помощи Bundle
     // Этот метод вызывается, когда нужно сохранить состояние View
 //    override fun onSaveInstanceState(outState: Bundle) {
 //        // Состояние сохраняется в обьект типа Bundle
@@ -49,6 +53,25 @@ class MainActivity : AppCompatActivity() {
 //       setInvertedValueText()
 //   }
 
+    // TODO: раскомметируйте код ниже для того,
+    //  чтобы попробовать сохранять состояние при помощи Bundle
+//    // Обьявляем нашу ViewModel при помощи делегата by viewModels
+//    private val viewModel: MainViewModel by viewModels()
+//
+//    // Этот метод инициализирует observe обьета live data, который хранит наше значение
+//    private fun observeLiveData() {
+//        // Чтобы наблюдать зачение обьекта live data, вызовем метод observe
+//        // и передадим в аргументы this и Observer
+//        // Observer имеет лямбду, которая и будет вызываться с новым значением
+//        viewModel.invertedValueLiveData.observe(this, Observer {
+//            // Обновляем значение нашей переменной
+//            invertedValue = it
+//
+//            // Вызываем функцию для отображения нашего значения
+//            setInvertedValueText()
+//        })
+//    }
+
     private fun initUI() {
         // Устанавливаем слушатель нажатия на кнопку
         bInvert.setOnClickListener {
@@ -57,6 +80,10 @@ class MainActivity : AppCompatActivity() {
 
             // Вызываем функцию для отображения нашего значения
             setInvertedValueText()
+
+            // Если вы используете ViewModel - раскомментируйте следующий блок
+            // Обновление значения live data
+//            viewModel.invertedValueLiveData.value = invertedValue
         }
     }
 
